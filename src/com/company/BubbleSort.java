@@ -13,10 +13,46 @@ public class BubbleSort {
             }
         }
     }
-    public static int[] randIntArr(int count){}
+    public static int[] randIntArr(int count){
+        int[] arr = new int[count];
+        for(int i=0; i< arr.length; i++){
+            arr[i]= (count)(Math.random()*1000);
+        }
+        return arr;
+    }
 
-    public static void isSorted(int[] arr){}
+    public static boolean isSorted(int[] arr){
+        for (int i=0; i<arr.length; i++){
+            if (arr[i+1] > arr[i]){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    }
 
-    public static void checkSum(int[] before, int[] after){}
+    public static void checkSum(int[] before, int[] after){
+        int beforeSum = 0;
+        int afterSum =0;
+        for (int i= 0; i < before.length; i++){
+            beforeSum = beforeSum + before[i];
+        }
+        for (int i= 0; i < after.length; i++){
+            afterSum = afterSum + after[i];
+        }
+        if (beforeSum == afterSum)
+    }
+
+    public static void selectionSort(int[] arr){
+        for (int i=0; i < arr.length; i++){
+            int min = i;
+            for (int j=0; j < arr.length; j++){
+                if (arr[j] > arr[i]){
+                    swap(arr, arr[i], arr[j])
+                }
+            }
+        }
+    }
 
 }
