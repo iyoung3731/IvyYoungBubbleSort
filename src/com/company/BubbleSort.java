@@ -32,7 +32,7 @@ public class BubbleSort {
         }
     }
 
-    public static void checkSum(int[] before, int[] after){
+    public static boolean checkSum(int[] before, int[] after){
         int beforeSum = 0;
         int afterSum =0;
         for (int i= 0; i < before.length; i++){
@@ -41,7 +41,12 @@ public class BubbleSort {
         for (int i= 0; i < after.length; i++){
             afterSum = afterSum + after[i];
         }
-        if (beforeSum == afterSum)
+        if (beforeSum == afterSum){
+            return true; 
+        }
+        else{
+            return false;
+        }
     }
 
     public static void selectionSort(int[] arr){
@@ -49,7 +54,7 @@ public class BubbleSort {
             int min = i;
             for (int j=0; j < arr.length; j++){
                 if (arr[j] > arr[i]){
-                    swap(arr, arr[i], arr[j])
+                    swap(arr, i, j)
                 }
             }
         }
